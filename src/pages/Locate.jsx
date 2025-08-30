@@ -3,7 +3,7 @@ export default function Locate() {
     <section className="locate-section">
       <h2>Ubícanos</h2>
       <p>
-        Av. Ejemplo 123, Ciudad — Referencia: frente al parque central.
+        Av. Abancay 149-A, Lima 15001 — Referencia: al costado del Congreso.
       </p>
 
       <div className="map-container">

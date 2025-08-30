@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="footer">
-      © {new Date().getFullYear()} <span>Tu Tienda</span> — Solo escaparate
+      © {new Date().getFullYear()} <span>Galerias El Congreso 122-217</span> — Solo escaparate
     </footer>
   );
 }

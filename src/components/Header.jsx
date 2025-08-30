@@ -6,7 +6,7 @@ export default function Header() {
     <header className="header">
       <div className="logo-container">
         <img src={logo} alt="Logo" className="logo" />
-        <h1 className="brand">Tu Tienda</h1>
+        <h1 className="brand">Galerias 122 - 217</h1>
       </div>
       <nav className="nav">
         <NavLink to="/" className={({ isActive }) => "nav-link" + (isActive ? " active" : "")}>

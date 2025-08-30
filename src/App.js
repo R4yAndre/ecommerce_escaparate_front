@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Locate from "./pages/Locate";
-import ProductDetail from "./pages/ProductDetail"; // 👈 importa la nueva página
+import ProductDetail from "./pages/ProductDetail";
 
 export default function App() {
   return (
@@ -22,7 +22,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/productos" element={<Products />} />
-            <Route path="/producto/:id" element={<ProductDetail />} /> {/* 👈 nueva ruta */}
+            <Route path="/producto/:id" element={<ProductDetail />} />
             <Route path="/ubicanos" element={<Locate />} />
           </Routes>
         </main>

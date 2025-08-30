@@ -4,10 +4,10 @@ export default function Home() {
       <div className="overlay"></div>
       <div className="content">
         <h1>
-          Bienvenido a <span className="highlight">Tu Tienda</span>
+          Bienvenido a <span className="highlight">Galerias El Congreso 122-217</span>
         </h1>
-        <p>Moda atemporal, calidad y elegancia para tu día a día.</p>
-        <a href="/productos" className="btn">Ver Colección</a>
+        <p>Moda a tu estilo.</p>
+        <a href="/productos" className="btn">Ver Productos</a>
       </div>
     </section>
   );
