@@ -378,6 +378,17 @@ body {
   color: #111;
 }
 
+.detail-box {
+  display: inline-block;
+  background: rgba(250, 204, 21, 0.2); /* fondo amarillo semitransparente */
+  color: #facc15; /* texto resaltado */
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 /* ===== Responsive Tabletas ===== */
 @media (max-width: 768px) {
   .product-detail-container {

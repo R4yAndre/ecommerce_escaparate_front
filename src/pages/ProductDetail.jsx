@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductos, getColor, getMaterial } from "../services/api.js";
+import React from "react";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -50,7 +51,35 @@ export default function ProductDetail() {
         <div className="detail-info">
           <h2>{producto.nombre}</h2>
           <p className="detail-price">S/ {producto.precio}</p>
-          <p className="detail-description">{producto.descripcion}</p>
+          <p className="detail-description">
+            {producto.descripcion.split(/(?=Tallas:|Colores:)/).map((line, index) => {
+              const regex = /(Tallas:[^.,]*|Colores:[^.,]*)/gi;
+              const parts = [];
+              let lastIndex = 0;
+
+              line.replace(regex, (match, _, offset) => {
+                if (offset > lastIndex) {
+                  parts.push(<span key={parts.length}>{line.slice(lastIndex, offset)}</span>);
+                }
+
+                // br + recuadro (sin agregar puntos extra)
+                parts.push(
+                  <span key={parts.length}>
+                    <br />
+                    <span className="detail-box">{match.trim()}</span>
+                  </span>
+                );
+
+                lastIndex = offset + match.length;
+              });
+
+              if (lastIndex < line.length) {
+                parts.push(<span key={parts.length}>{line.slice(lastIndex)}</span>);
+              }
+
+              return <React.Fragment key={index}>{parts}</React.Fragment>;
+            })}
+          </p>
           <ul className="detail-meta">
             <li><strong>Color:</strong> {color}</li>
             <li><strong>Material:</strong> {material}</li>
