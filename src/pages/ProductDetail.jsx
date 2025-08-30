@@ -53,7 +53,7 @@ export default function ProductDetail() {
           <p className="detail-price">S/ {producto.precio}</p>
           <p className="detail-description">
             {producto.descripcion.split(/(?=Tallas:|Colores:)/).map((line, index) => {
-              const regex = /(Tallas:[^.,]*|Colores:[^.,]*)/gi;
+              const regex = /(Tallas:[^.]*)|(Colores:[^.]*)/gi;
               const parts = [];
               let lastIndex = 0;
 
